@@ -17,11 +17,11 @@ const (
 func GetPaymentMethod(m int) (PaymentMethod, error) {
 	switch m {
 		case Cash:
-		return new(CashPM), nil
+			return new(CashPM), nil
 		case DebitCard:
-		return new(DebitCardPM), nil
+			return new(DebitCardPM), nil
 		default:
-		return nil, errors.New(fmt.Sprintf("Payment method %d not recognized\n", m))
+			return nil, errors.New(fmt.Sprintf("Payment method %d not recognized\n", m))
 	}
 }
 
@@ -33,5 +33,5 @@ func (c *CashPM) Pay(amount float32) string {
 }
 
 func (c *DebitCardPM) Pay(amount float32) string {
-	return fmt.Sprintf("%#0.2f paid using debit card\n", amount) 
+	return fmt.Sprintf("%#0.2f paid using debit card\n", amount)
 }
