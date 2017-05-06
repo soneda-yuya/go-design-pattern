@@ -4,22 +4,22 @@ import (
 	"fmt"
 )
 type LegacyPrinter interface {
-  Print(s string) string
+	Print(s string) string
 }
 
 type MyLegacyPrinter struct {}
 
 func (l *MyLegacyPrinter) Print(s string) (newMsg string) {
-  newMsg = fmt.Sprintf("Legacy Printer: %s\n", s)
-  println(newMsg)
-  return
+	newMsg = fmt.Sprintf("Legacy Printer: %s\n", s)
+	println(newMsg)
+	return
 }
 
 type ModernPrinter interface {
-	Print() string
+	PrintStore() string
 }
 
-type PrinterAdapter struct{
+type PrinterAdapter struct {
 	OldPrinter LegacyPrinter
 	Msg        string
 }
