@@ -1,0 +1,2 @@
+●Dynamically chain the actions at runtime based on some input
+●Pass a request through a chain of processors until one of them can process it, in which case the chain could be stopped
