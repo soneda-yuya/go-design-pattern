@@ -1,0 +1,2 @@
+◼︎ Provide a few algorithms to achieve some specific functionality
+◼︎ All types achieve the same functionality in a different way but the client of the strategy isn't affected
